@@ -74,7 +74,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-muted-foreground">
-          <p>&copy; 2024 ManikamWebSolutions. Sva prava zadržana.</p>
+          <a href="https://www.manikamwebsolutions.com/" target="_blank">
+            <p>&copy; 2024 ManikamWebSolutions. Sva prava zadržana.</p>
+          </a>{" "}
         </div>
       </div>
     </motion.footer>
