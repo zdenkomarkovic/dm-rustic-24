@@ -166,7 +166,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const HandleScroll = (e: Event) => {
+    const HandleScroll = () => {
       if (window.scrollY > 0) setScrolled(true);
       else setScrolled(false);
     };
