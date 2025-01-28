@@ -65,16 +65,17 @@ const Hero = () => {
           DM RUSTIC 24
         </h1>
         <h2 className="text-background font-medium md:text-[1.5rem] text-md max-w-[800px] px-4">
-          Listele ciglice ukrasni kamen i mnogo toga jos
+          Dekorativne ciglice, listele, seceni prirodni kamen, lomljeni prirodni
+          kamen{" "}
         </h2>
         <div className="flex flex-col gap-4 md:flex-row">
-          <Link href="">
+          <Link href="/proizvodi">
             <motion.button
               whileHover={{ translateY: "-5px" }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 bg-primary text-foreground px-4 py-2 md:px-8 md:py-3 rounded-lg font-medium"
             >
-              Istražite naše usluge
+              Istražite naše proizvode
               <ArrowRightIcon className="w-[18px]" />
             </motion.button>
           </Link>
@@ -84,7 +85,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-transparent border-background border-[1px] rounded-lg px-4 md:px-8 md:py-3 py-2 font-medium"
             >
-              Zatražite ponudu
+              Pozovite odmah
             </motion.button>
           </Link>
         </div>

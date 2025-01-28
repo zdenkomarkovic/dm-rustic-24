@@ -50,7 +50,7 @@ const MobileMenu = () => (
             className="flex items-center justify-center w-full rounded-full text-primary border-primary border-2 text-lg py-3 px-6 mt-4 transition-colors"
           >
             <PhoneIcon />
-            <Link href="+381644032842">
+            <Link href="tel:+381644032842">
               <p>+38164 403 2842</p>
             </Link>
           </motion.button>
