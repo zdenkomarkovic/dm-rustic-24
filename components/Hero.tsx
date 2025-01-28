@@ -62,7 +62,7 @@ const Hero = () => {
       </Carousel>
       <div className="relative flex flex-col gap-6 w-full items-center justify-center text-white z-[1] text-center">
         <h1 className="text-primary md:text-[4rem] text-xl font-bold max-w-[900px] leading-[1.2] px-4">
-          DM Rustic 24
+          DM RUSTIC 24
         </h1>
         <h2 className="text-background font-medium md:text-[1.5rem] text-md max-w-[800px] px-4">
           Listele ciglice ukrasni kamen i mnogo toga jos
