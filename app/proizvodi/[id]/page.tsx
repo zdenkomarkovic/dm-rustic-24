@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "@/node_modules/next/image";
 import { notFound, useParams } from "@/node_modules/next/navigation";
 import { productList } from "@/constants/index";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Euro } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "@/node_modules/next/link";
 
@@ -83,8 +83,9 @@ const ProductPage = () => {
               </div>
               <div className="lg:w-1/2 flex flex-col justify-end">
                 <div className="space-y-8">
-                  <p className="text-3xl font-bold text-primary">
-                    Cena: {product.price}e
+                  <p className="text-3xl font-bold text-primary flex items-center">
+                    Cena: {product.price}
+                    <Euro />
                   </p>
                   <div className="">
                     <div className="flex items-center gap-2">
