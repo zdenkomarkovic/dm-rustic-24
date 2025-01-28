@@ -94,7 +94,7 @@ const ProductPage = () => {
                   </div>
                   <div>
                     <p className="border-b-2 my-2">Karakteristike</p>
-                    <div className="grid grid-cols-2">
+                    <div className="grid md:grid-cols-2">
                       {product.karakteristike.map((item, i) => {
                         return <p key={i}>{item} </p>;
                       })}
