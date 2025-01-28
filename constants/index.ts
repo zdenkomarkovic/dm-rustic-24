@@ -1,29 +1,29 @@
 export const navList = [
-  {
-    title: "Početna",
-    link: "/pocetna",
-  },
-  {
-    title: "Usluge",
-    list: [
-      {
-        title: "1",
-        link: "",
-      },
-      {
-        title: "2",
-        link: "",
-      },
-      {
-        title: "3",
-        link: "",
-      },
-      {
-        title: "P4",
-        link: "",
-      },
-    ],
-  },
+  // {
+  //   title: "Početna",
+  //   link: "/pocetna",
+  // },
+  // {
+  //   title: "Usluge",
+  //   list: [
+  //     {
+  //       title: "1",
+  //       link: "",
+  //     },
+  //     {
+  //       title: "2",
+  //       link: "",
+  //     },
+  //     {
+  //       title: "3",
+  //       link: "",
+  //     },
+  //     {
+  //       title: "P4",
+  //       link: "",
+  //     },
+  //   ],
+  // },
   {
     title: "Proizvodi",
     link: "/proizvodi",

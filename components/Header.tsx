@@ -44,11 +44,11 @@ const MobileMenu = () => (
       <SheetHeader>
         <SheetTitle></SheetTitle>
         <SheetContent>
-          <Image
+          {/* <Image
             src={Logo}
             alt="Domino Enterijer"
             className="mt-[-20px] mb-[-20px] mx-[-50px] h-[120px] block"
-          />
+          /> */}
           <ul>
             {navList.map((item, index) => {
               if (item.list)
