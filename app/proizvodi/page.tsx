@@ -42,7 +42,9 @@ const ProductCard = ({ product }: { product: ProductList }) => {
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Card className="bg-gray-200 h-full ">
         <CardHeader>
-          <CardTitle className="text-primary">{product.title}</CardTitle>
+          <CardTitle className="text-primary text-[22px]">
+            {product.title}
+          </CardTitle>
           <CardDescription></CardDescription>
         </CardHeader>
         <CardContent className="flex-grow flex flex-col gap-6">
@@ -55,7 +57,7 @@ const ProductCard = ({ product }: { product: ProductList }) => {
             />
           </div>
           <CardDescription>
-            <p>{product.text}</p>
+            <p>{product.text.substring(0, 80) + "..."}</p>
           </CardDescription>
           <p className="text-2xl text-primary">
             Cena: <span className="font-bold">{product.price}e</span> m²

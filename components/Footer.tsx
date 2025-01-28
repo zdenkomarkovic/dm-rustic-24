@@ -54,8 +54,10 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <a href="mailto:manikamwebsolutions@gmail.com">
-                <p className="text-muted-foreground text-wrap">Email:</p>
+              <a href="mailto:dmrustic2023@gmail.com">
+                <p className="text-muted-foreground text-wrap">
+                  Email: dmrustic2023@gmail.com
+                </p>
               </a>
             </div>
             <div className="flex space-x-4 justify-center md:justify-start">
