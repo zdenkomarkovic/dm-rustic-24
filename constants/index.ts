@@ -1,8 +1,8 @@
 export const navList = [
-  // {
-  //   title: "Početna",
-  //   link: "/pocetna",
-  // },
+  {
+    title: "Početna",
+    link: "/",
+  },
   // {
   //   title: "Usluge",
   //   list: [
@@ -28,10 +28,10 @@ export const navList = [
     title: "Proizvodi",
     link: "/proizvodi",
   },
-  {
-    title: "O nama",
-    link: "",
-  },
+  // {
+  //   title: "O nama",
+  //   link: "",
+  // },
   {
     title: "Kontakt",
     link: "",
