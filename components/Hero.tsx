@@ -79,7 +79,7 @@ const Hero = () => {
               <ArrowRightIcon className="w-[18px]" />
             </motion.button>
           </Link>
-          <Link href="tel:+381644032842">
+          <a href="tel:+381644032842">
             <motion.button
               whileHover={{ translateY: "-5px" }}
               whileTap={{ scale: 0.95 }}
@@ -87,7 +87,7 @@ const Hero = () => {
             >
               Pozovite odmah
             </motion.button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

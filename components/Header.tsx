@@ -112,18 +112,18 @@ export default function Header() {
           />
         </Link>
         <DesktopNav />
-        <motion.button
-          whileHover={{
-            color: "hsl(var(--foreground))",
-            backgroundColor: "hsl(var(--primary))",
-          }}
-          className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-md py-1 px-2 md:py-3 md:px-6 transition-colors flex"
-        >
-          <PhoneIcon />
-          <Link href="tel:+381644032842">
+        <Link href="tel:+381644032842">
+          <motion.button
+            whileHover={{
+              color: "hsl(var(--foreground))",
+              backgroundColor: "hsl(var(--primary))",
+            }}
+            className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-md py-1 px-2 md:py-3 md:px-6 transition-colors flex"
+          >
+            <PhoneIcon />
             <p className="">+38164 403 2842</p>
-          </Link>
-        </motion.button>
+          </motion.button>
+        </Link>
         <MobileMenu />
       </nav>
     </header>
