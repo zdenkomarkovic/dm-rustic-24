@@ -76,7 +76,18 @@ const ProductPage = () => {
           <CardContent>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-1/2">
-                <div className="relative h-64 sm:h-80 md:h-96 mb-4 ">
+                <motion.div
+                  className="relative h-64 sm:h-80 md:h-96 mb-4 "
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  onDragEnd={(event, info) => {
+                    if (info.offset.x > 50) {
+                      prevImage();
+                    } else if (info.offset.x < -50) {
+                      nextImage();
+                    }
+                  }}
+                >
                   <Image
                     src={images[currentImageIndex]}
                     alt={product.title}
@@ -100,7 +111,7 @@ const ProductPage = () => {
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>
-                </div>
+                </motion.div>
                 <div className="flex justify-center space-x-2">
                   {images.map((_, index) => (
                     <button
