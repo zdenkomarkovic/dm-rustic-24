@@ -109,8 +109,12 @@ const ProductPage = () => {
         {" "}
         <Card className="bg-gray-100">
           <CardHeader>
-            <CardTitle className="text-3xl sm:text-4xl text-primary">
-              {product.title}
+            <CardTitle className="text-3xl sm:text-4xl text-primary flex">
+              {product.title}{" "}
+              <span className="text-3xl pl-8 font-bold text-primary flex items-center">
+                Cena: {product.price}
+                <Euro />
+              </span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -156,51 +160,42 @@ const ProductPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:w-1/2 flex flex-col justify-end">
-                <div className="space-y-8">
-                  <p className="text-3xl font-bold text-primary flex items-center">
-                    Cena: {product.price}
-                    <Euro />
-                  </p>
-                  <div className="">
-                    <div className="flex items-center gap-2">
-                      {product.text}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="border-b-2 my-2">Karakteristike</p>
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <p className="flex gap-2">
-                        {" "}
-                        <span className="text-primary">
-                          <BrickWall />
-                        </span>{" "}
-                        {product.ground}
-                      </p>
-                      <p className="flex gap-2">
-                        <span className="text-primary">
-                          <Leaf />
-                        </span>{" "}
-                        {product.eco}
-                      </p>
-                      <p className="flex gap-2">
-                        {" "}
-                        <span className="text-primary">
-                          <Umbrella />
-                        </span>
-                        {product.outside}
-                      </p>
-                      <p className="flex gap-2">
-                        <span className="text-primary">
-                          <Anvil />
-                        </span>{" "}
-                        {product.weight}
-                      </p>
-                    </div>
+              <div className="lg:w-1/2 flex flex-col justify-around">
+                <p className="first-letter:pl-5">{product.text}</p>
+
+                <div>
+                  <p className="border-b-2 my-2">Karakteristike</p>
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <p className="flex gap-2">
+                      {" "}
+                      <span className="text-primary">
+                        <BrickWall />
+                      </span>{" "}
+                      {product.ground}
+                    </p>
+                    <p className="flex gap-2">
+                      <span className="text-primary">
+                        <Leaf />
+                      </span>{" "}
+                      {product.eco}
+                    </p>
+                    <p className="flex gap-2">
+                      {" "}
+                      <span className="text-primary">
+                        <Umbrella />
+                      </span>
+                      {product.outside}
+                    </p>
+                    <p className="flex gap-2">
+                      <span className="text-primary">
+                        <Anvil />
+                      </span>{" "}
+                      {product.weight}
+                    </p>
                   </div>
                 </div>
 
-                <div className=" mt-auto mb-7">
+                <div className="">
                   <a href="tel:+381644032842">
                     <Button size="lg" className="w-full">
                       Pozovite odmah: +38164 403 2842
