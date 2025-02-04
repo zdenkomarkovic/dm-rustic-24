@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "@/node_modules/next/image";
 import { notFound, useParams } from "@/node_modules/next/navigation";
@@ -19,12 +19,15 @@ const ProductPage = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showImage, setShowImage] = useState(false);
+  const [direction, setDirection] = useState(0);
 
   const images = product.images;
   const nextImage = () => {
+    setDirection(1);
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
   const prevImage = () => {
+    setDirection(-1);
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
@@ -35,32 +38,30 @@ const ProductPage = () => {
           showImage ? "block " : "hidden"
         }`}
       >
-        {/* <Image
-            src={images[currentImageIndex]}
-            alt="separe"
-            fill
-            className="object-contain"
-          /> */}
-        <motion.img
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          onDragEnd={(event, info) => {
-            if (info.offset.x > 50) {
-              prevImage();
-            } else if (info.offset.x < -50) {
-              nextImage();
-            }
-          }}
-          key={currentImageIndex} // Ključ omogućava re-render bez kašnjenja
-          src={images[currentImageIndex]}
-          alt={product.title}
-          className="rounded-lg object-contain w-full h-full"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -100, opacity: 0 }}
-          transition={{ duration: 0.1 }} // Brža tranzicija
-        />
-
+        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+          <AnimatePresence custom={direction}>
+            {images.map((src, index) =>
+              index === currentImageIndex ? (
+                <motion.img
+                  key={index}
+                  src={src}
+                  alt="Product Image"
+                  className="absolute w-full h-full object-contain"
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  onDragEnd={(event, info) => {
+                    if (info.offset.x > 100) prevImage();
+                    else if (info.offset.x < -100) nextImage();
+                  }}
+                  initial={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                />
+              ) : null
+            )}
+          </AnimatePresence>
+        </div>
         <button
           onClick={prevImage}
           className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-muted p-2 rounded-full"
