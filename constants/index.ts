@@ -75,7 +75,7 @@ export const productList = [
   },
   {
     id: 4,
-    title: "Dekorativne ciglice 15x30 cm – crveno-žuta kombinacija",
+    title: "Dekorativne ciglice 15x30 cm, crveno-žuta kombinacija",
     text: "Ove dekorativne ciglice dimenzija 15x30 cm, u kombinaciji crvenih i žutih tonova, idealne su za podne i zidne obloge. Sečene od prirodnih materijala, odlikuju se visokom otpornošću na spoljne uticaje i mogu podneti velika opterećenja. Pored izdržljivosti, pružaju i odličnu toplotnu izolaciju, čineći svaki prostor estetski privlačnim i energetski efikasnim.",
     price: 9,
     ground: " - podna i zidna obloga",

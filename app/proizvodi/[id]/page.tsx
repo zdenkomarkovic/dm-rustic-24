@@ -98,11 +98,11 @@ const ProductPage = () => {
         {" "}
         <Card className="bg-gray-100">
           <CardHeader>
-            <CardTitle className="text-3xl sm:text-4xl text-primary flex">
-              {product.title}{" "}
-              <span className="text-3xl pl-8 font-bold text-primary flex items-center">
-                Cena: {product.price}
-                <Euro />
+            <CardTitle className=" text-left text-xl md:text-4xl text-primary flex items-end">
+              {product.title}
+              <span className="flex pl-3 md:pl-7 items-center ">
+                {product.price}
+                <Euro className="md:w-8 md:h-8" />
               </span>
             </CardTitle>
           </CardHeader>
@@ -149,7 +149,7 @@ const ProductPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:w-1/2 flex flex-col justify-around">
+              <div className="lg:w-1/2 flex flex-col justify-around space-y-5 md:space-y-0">
                 <p className="first-letter:pl-5">{product.text}</p>
 
                 <div>

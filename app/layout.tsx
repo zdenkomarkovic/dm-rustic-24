@@ -17,12 +17,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DM RUSTIC 24 dekorativne ciglice",
   description:
-    "Veliki izbor dekorativnih ciglica, listela, dekorativnog kamena",
+    "Dm Rustic se bavi proizvodnjom dekorativnih ciglica, listela, dekorativnog kamena, lomljenog kamena, secenog kamena, stanglice",
   icons: {
     icon: "/logo.jpg",
     apple: "/logo.jpg",
   },
-  keywords: ["dekorativne ciglice", "ciglice", "listele"],
+  keywords: [
+    "dekorativne ciglice",
+    "ciglice",
+    "listele",
+    "dekorativna cigla",
+    "lomljeni kamen",
+    "dekorativni kamen",
+    "stanglice",
+    "seceni kamen",
+  ],
 };
 
 export default function RootLayout({

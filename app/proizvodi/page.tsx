@@ -12,6 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../../components/ui/card";
+import { Euro } from "lucide-react";
 
 const Products = () => {
   return (
@@ -59,8 +60,13 @@ const ProductCard = ({ product }: { product: ProductList }) => {
           <CardDescription>
             <p>{product.text.substring(0, 80) + "..."}</p>
           </CardDescription>
-          <p className="text-2xl text-primary">
-            Cena: <span className="font-bold">{product.price}e</span> m²
+          <p className="text-2xl text-primary flex items-center">
+            Cena:{" "}
+            <span className="font-bold flex items-center pl-2">
+              {product.price}
+              <Euro className="md:w-8 md:h-8" />
+            </span>{" "}
+            m²
           </p>
           <Link href={`/proizvodi/${product.id}`}>
             <Button className="w-full bg-gray-800"> Saznaj vise...</Button>

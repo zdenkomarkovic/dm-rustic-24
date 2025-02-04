@@ -19,7 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail } from "lucide-react";
+import { Facebook, Mail } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Molimo unesite vase ime i prezime" }),
@@ -92,9 +92,7 @@ export default function Contact() {
                 </button>
               </a>
               <a
-                href="mailto:kankan732@gmail.com
-
-                "
+                href="mailto:kankan732@gmail.com"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
@@ -102,7 +100,7 @@ export default function Contact() {
                 </button>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/dm_rustic/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-[7px] flex border-b-[1px] border-primary "
@@ -110,7 +108,19 @@ export default function Contact() {
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   {" "}
                   <FaInstagram className=" text-[28px] lg:text-[30px]" />
-                  dm_rustic_24
+                  dm_rustic
+                </button>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61554328877469"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-[7px] flex border-b-[1px] border-primary "
+              >
+                <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
+                  {" "}
+                  <Facebook className=" text-[28px] lg:text-[30px]" />
+                  DM Rustic
                 </button>
               </a>
             </div>
