@@ -31,7 +31,7 @@ const MobileMenu = () => (
           <ul>
             {navList.map((item, index) => {
               return (
-                <Link key={index} href={item.link}>
+                <Link key={index} href={item.link} className="text-gray-800">
                   <motion.li
                     whileHover={{ color: "hsl(var(--primary))" }}
                     className={mobTitleStyles}
@@ -42,18 +42,6 @@ const MobileMenu = () => (
               );
             })}
           </ul>
-          <motion.button
-            whileHover={{
-              color: "hsl(var(--foreground))",
-              backgroundColor: "hsl(var(--primary))",
-            }}
-            className="flex items-center justify-center w-full rounded-full text-primary border-primary border-2 text-lg py-3 px-6 mt-4 transition-colors"
-          >
-            <PhoneIcon />
-            <Link href="tel:+381644032842">
-              <p>+38164 403 2842</p>
-            </Link>
-          </motion.button>
         </SheetContent>
       </SheetHeader>
     </SheetContent>
