@@ -59,36 +59,36 @@ export default function Contact() {
     <div className="">
       <div className="container mx-auto pt-28 pb-16 px-2 md:px-8 md:py-32 space-y-8 md:space-y-24">
         <h1 className="text-2xl md:text-5xl pl-2 md:px-32">
-          Kontakt enterijeri Kankan
+          Kontakt DM Rustic 24
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           <div className=" mx-6 md:mx-20">
             <div className="space-y-3 md:space-y-10 text-lg md:text-2xl">
               <a
-                href="tel:+38163216444"
+                href="tel:+381644032842"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <FaPhone className="text-[20px] lg:text-[30px]" />
-                  +38163 216 444
+                  +38164 403 2842
                 </button>
               </a>
               <a
-                href="viber://chat?number=%2B38163216444"
+                href="viber://chat?number=%2B381644032842"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <FaViber className="text-[28px] lg:text-[35px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
-                  +38163 216 444
+                  +38164 403 2842
                 </button>
               </a>
               <a
-                href="https://wa.me/38163216444"
+                href="https://wa.me/38164 403 2842"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <FaWhatsappSquare className="text-[30px] lg:text-[35px] rounded-2xl text-green-700 " />{" "}
-                  +38163 216 444
+                  +38164 403 2842
                 </button>
               </a>
               <a
@@ -98,11 +98,11 @@ export default function Contact() {
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                  <Mail className=" w-[28px] h-[28px]" /> kankan732@gmail.com
+                  <Mail className=" w-[28px] h-[28px]" /> dmrustic2023@gmail.com
                 </button>
               </a>
               <a
-                href="https://www.instagram.com/enterijeri_kankan/"
+                href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-[7px] flex border-b-[1px] border-primary "
@@ -110,7 +110,7 @@ export default function Contact() {
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   {" "}
                   <FaInstagram className=" text-[28px] lg:text-[30px]" />
-                  enterijeri_kankan
+                  dm_rustic_24
                 </button>
               </a>
             </div>
@@ -119,7 +119,7 @@ export default function Contact() {
           <div className="mx-6 md:mx-20 rounded-3xl ">
             <Form {...form}>
               <form
-                className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-2xl shadow-primary rounded-xl"
+                className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-1xl shadow-primary rounded-xl"
                 onSubmit={form.handleSubmit(onSubmit)}
               >
                 <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-8">

@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 
 const ProcesCard = () => {
   const motionDivClass =
-    "p-5 text-center space-y-6 mb-5 border-2 border-primary rounded-2xl shadow-xl shadow-primary";
+    "p-5 text-center space-y-6 mb-5  rounded-2xl shadow-xl shadow-primary";
 
   return (
-    <div className="border-t-[1px] border-primary container px-2 md:px-4 mx-auto py-20 space-y-5 md:space-y-28">
+    <div className="border-t-[1px] border-primary container  px-6 mx-auto py-20 space-y-5 md:space-y-28">
       {" "}
       <h2 className="text-2xl md:text-5xl text-center text-primary ">
         Na nas mozete racunati na sledece...
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-7  text-xl md:text-2xl pb-510 text-primary">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-7  text-xl md:text-2xl pb-510 text-primary">
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
