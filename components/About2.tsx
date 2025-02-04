@@ -4,7 +4,7 @@ const About2 = () => {
   return (
     <div className="bg-gray-800">
       {" "}
-      <div className="container px-2 lg:px-40 mx-auto text-gray-100 py-28 space-y-10  text-lg  md:text-2xl">
+      <div className="container px-2 lg:px-40 mx-auto text-gray-100 py-12 md:py-28 space-y-5 md:space-y-10  text-lg  md:text-2xl">
         <h1 className="text-2xl md:text-6xl">
           <span className="font-bold text-primary">
             Dekorativne ciglice, listele, prirodni kamen
@@ -25,7 +25,7 @@ const About2 = () => {
           <li> - Letnjikovce, parkinge i dekorativne detalje</li>
         </ul>
 
-        <h2 className=" text-2xl md:text-5xl pt-20 font-bold">
+        <h2 className=" text-2xl md:text-5xl pt-5 md:pt-20 font-bold">
           Karakteristike
         </h2>
         <ul className="font-bold">
@@ -41,7 +41,7 @@ const About2 = () => {
           </li>
           <li> - Uklapaju se i u rustičan i u moderan stil</li>
         </ul>
-        <h2 className=" text-2xl md:text-5xl pt-20 font-bold">
+        <h2 className=" text-2xl md:text-5xl pt-5 md:pt-20 font-bold">
           Prilagođavanje i dodatne usluge
         </h2>
         <ul className="font-bold">

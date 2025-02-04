@@ -57,7 +57,7 @@ export default function Contact() {
   };
   return (
     <div className="">
-      <div className="container mx-auto pt-28 pb-16 px-6 md:px-8 md:py-32 space-y-8 md:space-y-24">
+      <div className="container mx-auto pt-28 pb-16 px-6 md:px-8 md:py-32 space-y-12 md:space-y-24">
         <h1 className="text-2xl md:text-5xl pl-2 md:px-32">
           Kontakt DM Rustic 24
         </h1>
