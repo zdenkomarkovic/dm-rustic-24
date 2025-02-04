@@ -5,7 +5,16 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "@/node_modules/next/image";
 import { notFound, useParams } from "@/node_modules/next/navigation";
 import { productList } from "@/constants/index";
-import { ChevronLeft, ChevronRight, Euro, CircleX } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Euro,
+  CircleX,
+  Umbrella,
+  Anvil,
+  Leaf,
+  BrickWall,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "@/node_modules/next/link";
 import { useSwipeable } from "react-swipeable";
@@ -160,10 +169,33 @@ const ProductPage = () => {
                   </div>
                   <div>
                     <p className="border-b-2 my-2">Karakteristike</p>
-                    <div className="grid md:grid-cols-2">
-                      {product.karakteristike.map((item, i) => {
-                        return <p key={i}>{item} </p>;
-                      })}
+                    <div className="grid md:grid-cols-2 gap-5">
+                      <p className="flex gap-2">
+                        {" "}
+                        <span className="text-primary">
+                          <BrickWall />
+                        </span>{" "}
+                        {product.ground}
+                      </p>
+                      <p className="flex gap-2">
+                        <span className="text-primary">
+                          <Leaf />
+                        </span>{" "}
+                        {product.eco}
+                      </p>
+                      <p className="flex gap-2">
+                        {" "}
+                        <span className="text-primary">
+                          <Umbrella />
+                        </span>
+                        {product.outside}
+                      </p>
+                      <p className="flex gap-2">
+                        <span className="text-primary">
+                          <Anvil />
+                        </span>{" "}
+                        {product.weight}
+                      </p>
                     </div>
                   </div>
                 </div>
