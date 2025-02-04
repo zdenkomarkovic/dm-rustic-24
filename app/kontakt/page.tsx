@@ -119,7 +119,7 @@ export default function Contact() {
           <div className="mx-6 md:mx-20 rounded-3xl ">
             <Form {...form}>
               <form
-                className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-1xl shadow-primary rounded-xl"
+                className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-xl shadow-primary rounded-xl"
                 onSubmit={form.handleSubmit(onSubmit)}
               >
                 <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-8">
