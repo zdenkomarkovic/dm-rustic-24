@@ -67,17 +67,6 @@ const ProductPage = () => {
               exit={{ x: direction * -600, opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             />
-            {/* NOVA SLIKA KOJA ULAZI */}
-            <motion.img
-              key={`next-${currentImageIndex}`}
-              src={images[(currentImageIndex + 1) % images.length]}
-              alt="Next Image"
-              className="absolute w-full h-full object-contain"
-              initial={{ x: direction * 600, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: direction * -300, opacity: 0.5 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            />
           </AnimatePresence>
         </div>
 
