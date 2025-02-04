@@ -77,7 +77,7 @@ const ProductPage = () => {
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-1/2">
                 <motion.div
-                  className="relative h-64 sm:h-80 md:h-96 mb-4 "
+                  className="relative h-64 sm:h-80 md:h-96 mb-4 overflow-hidden"
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
                   onDragEnd={(event, info) => {
