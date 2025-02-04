@@ -8,6 +8,7 @@ import { productList } from "@/constants/index";
 import { ChevronLeft, ChevronRight, Euro, CircleX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "@/node_modules/next/link";
+import { useSwipeable } from "react-swipeable";
 
 const ProductPage = () => {
   const params = useParams();
@@ -19,7 +20,7 @@ const ProductPage = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showImage, setShowImage] = useState(false);
-  const [direction, setDirection] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   const images = product.images;
   const nextImage = () => {
@@ -31,37 +32,46 @@ const ProductPage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: nextImage,
+    onSwipedRight: prevImage,
+  });
+
   return (
     <div className="bg-gray-800 py-28">
       <div
         className={`z-50 bg-black fixed w-full h-screen left-0 right-0 top-0 ${
           showImage ? "block " : "hidden"
         }`}
+        {...handlers}
       >
         <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-          <AnimatePresence custom={direction}>
-            {images.map((src, index) =>
-              index === currentImageIndex ? (
-                <motion.img
-                  key={index}
-                  src={src}
-                  alt="Product Image"
-                  className="absolute w-full h-full object-contain"
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  onDragEnd={(event, info) => {
-                    if (info.offset.x > 100) prevImage();
-                    else if (info.offset.x < -100) nextImage();
-                  }}
-                  initial={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                />
-              ) : null
-            )}
+          <AnimatePresence custom={direction} mode="popLayout">
+            {/* TRENUTNA SLIKA KOJA IZLAZI */}
+            <motion.img
+              key={currentImageIndex}
+              src={images[currentImageIndex]}
+              alt="Product Image"
+              className="absolute w-full h-full object-contain"
+              initial={{ x: direction * 600, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction * -600, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            />
+            {/* NOVA SLIKA KOJA ULAZI */}
+            <motion.img
+              key={`next-${currentImageIndex}`}
+              src={images[(currentImageIndex + 1) % images.length]}
+              alt="Next Image"
+              className="absolute w-full h-full object-contain"
+              initial={{ x: direction * 600, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction * -300, opacity: 0.5 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            />
           </AnimatePresence>
         </div>
+
         <button
           onClick={prevImage}
           className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-muted p-2 rounded-full"
