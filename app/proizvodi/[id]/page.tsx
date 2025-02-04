@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "@/node_modules/next/image";
 import { notFound, useParams } from "@/node_modules/next/navigation";
 import { productList } from "@/constants/index";
-import { ChevronLeft, ChevronRight, Euro } from "lucide-react";
+import { ChevronLeft, ChevronRight, Euro, CircleX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "@/node_modules/next/link";
 
@@ -18,6 +18,8 @@ const ProductPage = () => {
   }
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showImage, setShowImage] = useState(false);
+
   const images = product.images;
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -28,6 +30,36 @@ const ProductPage = () => {
 
   return (
     <div className="bg-gray-800 py-28">
+      <div
+        className={`z-50 bg-black fixed w-full h-screen left-0 right-0 top-0 ${
+          showImage ? "block " : "hidden"
+        }`}
+      >
+        <Image
+          src={images[currentImageIndex]}
+          alt="separe"
+          fill
+          className="object-contain"
+        />
+        <button
+          onClick={prevImage}
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-muted p-2 rounded-full"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextImage}
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-muted p-2 rounded-full"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+        <button
+          onClick={() => setShowImage(false)}
+          className="absolute right-2 top-10 transform -translate-y-1/2 bg-black/50 text-muted p-2 rounded-full"
+        >
+          <CircleX className="w-6 h-6" />
+        </button>
+      </div>
       <motion.div
         className="container mx-auto px-4 py-8 space-y-12"
         initial={{ opacity: 0 }}
@@ -49,6 +81,9 @@ const ProductPage = () => {
                     src={images[currentImageIndex]}
                     alt={product.title}
                     fill
+                    onClick={() => {
+                      setShowImage(true);
+                    }}
                     className="rounded-lg object-cover"
                   />
                   <button

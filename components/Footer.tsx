@@ -26,16 +26,16 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/"
+                  href="/proizvodi"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  Usluge
+                  Proizvodi
                 </Link>
               </li>
 
               <li>
                 <Link
-                  href="/"
+                  href="/kontakt"
                   className="text-muted-foreground hover:text-primary"
                 >
                   Kontakt
@@ -48,14 +48,14 @@ export default function Footer() {
             <div>
               {" "}
               <a href="tel:+381644032842">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground  hover:text-primary">
                   Telefon: +38164 403 2842
                 </p>
               </a>
             </div>
             <div>
               <a href="mailto:dmrustic2023@gmail.com">
-                <p className="text-muted-foreground text-wrap">
+                <p className="text-muted-foreground  hover:text-primary">
                   Email: dmrustic2023@gmail.com
                 </p>
               </a>
@@ -75,9 +75,15 @@ export default function Footer() {
             <p className=" font-bold ">Ulepsajmo zajedno vas dom</p>
           </div>
         </div>
-        <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-muted-foreground/20 text-center text-muted-foreground">
+        <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-primary text-center text-muted-foreground">
           <a href="https://www.manikamwebsolutions.com/" target="_blank">
-            <p>&copy; 2024 ManikamWebSolutions. Sva prava zadržana.</p>
+            <p>
+              &copy; 2025{" "}
+              <span className="font-bold text-primary">
+                ManikamWebSolutions
+              </span>
+              . Sva prava zadržana.
+            </p>
           </a>{" "}
         </div>
       </div>

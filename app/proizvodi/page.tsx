@@ -39,7 +39,7 @@ export default Products;
 
 const ProductCard = ({ product }: { product: ProductList }) => {
   return (
-    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <motion.div whileHover={{ scale: 1.05 }}>
       <Card className="bg-gray-200 h-full ">
         <CardHeader>
           <CardTitle className="text-primary text-[22px]">
