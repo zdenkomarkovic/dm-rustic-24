@@ -57,12 +57,12 @@ export default function Contact() {
   };
   return (
     <div className="">
-      <div className="container mx-auto pt-28 pb-16 px-2 md:px-8 md:py-32 space-y-8 md:space-y-24">
+      <div className="container mx-auto pt-28 pb-16 px-6 md:px-8 md:py-32 space-y-8 md:space-y-24">
         <h1 className="text-2xl md:text-5xl pl-2 md:px-32">
           Kontakt DM Rustic 24
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-          <div className=" mx-6 md:mx-20">
+          <div className=" mx-2 md:mx-20">
             <div className="space-y-3 md:space-y-10 text-lg md:text-2xl">
               <a
                 href="tel:+381644032842"
@@ -116,7 +116,7 @@ export default function Contact() {
             </div>
             <div className="pl-4 md:pl-7 pt-4 lg:pt-12"></div>
           </div>
-          <div className="mx-6 md:mx-20 rounded-3xl ">
+          <div className="mx-2 md:mx-20 rounded-3xl ">
             <Form {...form}>
               <form
                 className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-xl shadow-primary rounded-xl"
@@ -206,6 +206,17 @@ export default function Contact() {
             </Form>
           </div>
         </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45639.919436319185!2d19.647714791546164!3d44.361425060684425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759901fe0a7b72b%3A0x9d48929a7330fc33!2zT3NsYWRpxIc!5e0!3m2!1sen!2srs!4v1738666807875!5m2!1sen!2srs"
+          width="600"
+          height="450"
+          style={{ border: "0" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full rounded-2xl"
+        ></iframe>
       </div>
     </div>
   );
