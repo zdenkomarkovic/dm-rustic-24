@@ -35,12 +35,24 @@ const ProductPage = () => {
           showImage ? "block " : "hidden"
         }`}
       >
-        <Image
-          src={images[currentImageIndex]}
-          alt="separe"
-          fill
-          className="object-contain"
-        />
+        <motion.div
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(event, info) => {
+            if (info.offset.x > 50) {
+              prevImage();
+            } else if (info.offset.x < -50) {
+              nextImage();
+            }
+          }}
+        >
+          <Image
+            src={images[currentImageIndex]}
+            alt="separe"
+            fill
+            className="object-contain"
+          />
+        </motion.div>
         <button
           onClick={prevImage}
           className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-muted p-2 rounded-full"
@@ -76,18 +88,7 @@ const ProductPage = () => {
           <CardContent>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-1/2">
-                <motion.div
-                  className="relative h-64 sm:h-80 md:h-96 mb-4 overflow-hidden"
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  onDragEnd={(event, info) => {
-                    if (info.offset.x > 50) {
-                      prevImage();
-                    } else if (info.offset.x < -50) {
-                      nextImage();
-                    }
-                  }}
-                >
+                <motion.div className="relative h-64 sm:h-80 md:h-96 mb-4 overflow-hidden">
                   <Image
                     src={images[currentImageIndex]}
                     alt={product.title}
