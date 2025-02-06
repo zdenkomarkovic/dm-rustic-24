@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     "stanglice",
     "seceni kamen",
   ],
+  alternates: {
+    canonical: "https://www.dekorativneciglice/",
+  },
 };
 
 export default function RootLayout({
