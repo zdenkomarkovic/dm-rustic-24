@@ -71,6 +71,7 @@ export const productList = [
       "/Dekorativne ciglice od biber crepa 8x30 cm 3.jpg",
       "/Dekorativne ciglice od biber crepa 8x30 cm 4.jpg",
       "/Dekorativne ciglice od biber crepa 8x30 cm 5.jpg",
+      "/20250209_230254.jpg",
     ],
   },
   {

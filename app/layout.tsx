@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "seceni kamen",
   ],
   alternates: {
-    canonical: "https://www.dekorativneciglice/",
+    canonical: "https://www.dekorativneciglice.rs",
   },
 };
 
