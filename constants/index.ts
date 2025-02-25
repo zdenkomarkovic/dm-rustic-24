@@ -58,7 +58,7 @@ export const productList = [
   },
   {
     id: 3,
-    title: "Dekorativne ciglice od biber crepa 8x30 cm",
+    title: "Dekorativne ciglice od biber crepa 7.5x30 cm",
     text: "Sečene od autentičnog starog biber crepa, ove pločice dimenzija 8x30 cm idealne su za podne i zidne obloge. Izrađene od prirodnih materijala, odlikuju se visokim stepenom otpornosti na spoljne uticaje i mogu podneti velika opterecenja. Savršen izbor za rustične i moderne prostore koji zahtevaju dugotrajnost i estetsku vrednost.",
     price: 9,
     ground: " - podna i zidna obloga",
