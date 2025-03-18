@@ -216,9 +216,8 @@ export default function Contact() {
             </Form>
           </div>
         </div>
-
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45639.919436319185!2d19.647714791546164!3d44.361425060684425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759901fe0a7b72b%3A0x9d48929a7330fc33!2zT3NsYWRpxIc!5e0!3m2!1sen!2srs!4v1738666807875!5m2!1sen!2srs"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94000.36689486323!2d19.630234254649974!3d44.33284246042799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47598e2583b4478f%3A0x22ec59a0fd07cf6d!2z0JTQtdGB0LDQvdC60LUg0JzQsNC60YHQuNC80L7QstC40ZsgNTgsIFZhbGpldnNrYSBLYW1lbmljYQ!5e0!3m2!1sen!2srs!4v1742327899450!5m2!1sen!2srs"
           width="600"
           height="450"
           style={{ border: "0" }}
