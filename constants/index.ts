@@ -301,7 +301,7 @@ export const productList = [
     id: 22,
     title: "Domaca sumadijska listela",
     text: "Domaca sumadijska cigla, listela se koristi za zidnu ugradnju",
-    price: 2,
+    price: 13,
     ground: " - zidna obloga",
     eco: " - prirodni materijali",
     outside: " - za spoljasnju i unutrasnju ugradnju",
