@@ -89,6 +89,11 @@ const Hero = () => {
             </motion.button>
           </a>
         </div>
+        <div>
+          <h3>Radno vreme</h3>
+          <p>Pon - Pet: 07 - 17h</p>
+          <p>Sub-Ned: 08 - 14h</p>
+        </div>
       </div>
     </div>
   );
