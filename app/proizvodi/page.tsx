@@ -4,7 +4,7 @@ import { ProductList, productList, categoryList } from "@/constants/index";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import {
   Card,
   CardContent,
@@ -15,7 +15,7 @@ import {
 import { Euro } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
-const Products = () => {
+const ProductsContent = () => {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
   const [selectedCategory, setSelectedCategory] = useState<number | null>(
@@ -81,6 +81,14 @@ const Products = () => {
         </div>
       </motion.div>
     </div>
+  );
+};
+
+const Products = () => {
+  return (
+    <Suspense fallback={<div className="py-28 bg-gray-800 flex items-center justify-center"><p className="text-white">Učitavanje...</p></div>}>
+      <ProductsContent />
+    </Suspense>
   );
 };
 
