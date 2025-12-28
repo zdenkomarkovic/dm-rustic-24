@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ProductList, productList } from "@/constants/index";
+import { ProductList, productList, categoryList } from "@/constants/index";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -13,8 +13,28 @@ import {
   CardTitle,
 } from "../../components/ui/card";
 import { Euro } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 const Products = () => {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const [selectedCategory, setSelectedCategory] = useState<number | null>(
+    categoryParam ? parseInt(categoryParam) : null
+  );
+
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedCategory(parseInt(categoryParam));
+    }
+  }, [categoryParam]);
+
+  const filteredProducts = selectedCategory
+    ? productList.filter((product) => {
+        const category = categoryList.find((cat) => cat.id === selectedCategory);
+        return category?.productIds.includes(product.id);
+      })
+    : productList;
+
   return (
     <div className="py-28 bg-gray-800">
       <motion.div
@@ -26,8 +46,36 @@ const Products = () => {
         <h1 className="text-4xl font-bold text-center  text-primary">
           Naša ponuda
         </h1>
+
+        {/* Category Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-4">
+          <Button
+            onClick={() => setSelectedCategory(null)}
+            className={`${
+              selectedCategory === null
+                ? "bg-primary text-white"
+                : "bg-gray-600 text-white hover:bg-gray-500"
+            }`}
+          >
+            Sve
+          </Button>
+          {categoryList.map((category) => (
+            <Button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`${
+                selectedCategory === category.id
+                  ? "bg-primary text-white"
+                  : "bg-gray-600 text-white hover:bg-gray-500"
+              }`}
+            >
+              {category.name}
+            </Button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {productList.map((product) => {
+          {filteredProducts.map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })}
         </div>

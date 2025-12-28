@@ -84,15 +84,19 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-5 pt-5 md:mt-8 md:pt-8 border-t border-primary text-center text-muted-foreground">
-          <a href="https://www.manikamwebsolutions.com/" target="_blank">
-            <p>
-              &copy; 2025{" "}
-              <span className="font-bold text-primary">
-                ManikamWebSolutions
-              </span>
-              . Sva prava zadržana.
-            </p>
-          </a>{" "}
+          <p className="mb-2">
+            &copy; 2025 <span className="font-bold text-primary">DM Rustic</span>. Sva prava zadržana.
+          </p>
+          <p className="text-sm">
+            Izrada sajta:{" "}
+            <a
+              href="https://www.manikamwebsolutions.com/"
+              target="_blank"
+              className="text-primary hover:underline font-semibold"
+            >
+              ManikamWebSolutions
+            </a>
+          </p>
         </div>
       </div>
     </motion.footer>
