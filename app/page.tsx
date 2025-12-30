@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <About2 />
       <Categories />
+      <About2 />
       <ProcesCard />
     </div>
   );
