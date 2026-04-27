@@ -107,6 +107,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                     src={images[currentImageIndex]}
                     alt={product.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     onClick={() => setShowImage(true)}
                     className="rounded-lg object-cover cursor-pointer"
                   />

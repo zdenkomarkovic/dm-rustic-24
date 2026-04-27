@@ -110,6 +110,7 @@ const ProductCard = ({ product }: { product: ProductList }) => {
               src={product.images[0]}
               alt={product.title}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="rounded-lg object-cover"
             />
           </div>
