@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "../public/logo.jpg";
+import Logo from "../public/logo.webp";
 import Link from "next/link";
 import { MenuIcon, PhoneIcon } from "lucide-react";
 

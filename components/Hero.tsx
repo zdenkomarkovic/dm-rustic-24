@@ -9,9 +9,9 @@ import {
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
 
-import Hero1 from "../public/hero1.jpg";
-import Hero2 from "../public/hero2.jpg";
-import Hero3 from "../public/hero3.jpg";
+import Hero1 from "../public/hero1.webp";
+import Hero2 from "../public/hero2.webp";
+import Hero3 from "../public/hero3.webp";
 
 import Image from "next/image";
 import { ArrowRightIcon } from "lucide-react";
