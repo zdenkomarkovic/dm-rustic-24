@@ -19,10 +19,6 @@ export const metadata: Metadata = {
   title: "DM RUSTIC 24 dekorativne ciglice",
   description:
     "Dm Rustic se bavi proizvodnjom dekorativnih ciglica, listela, dekorativnog kamena, lomljenog kamena, secenog kamena, stanglice",
-  icons: {
-    icon: "/logo.jpg",
-    apple: "/logo.jpg",
-  },
   keywords: [
     "dekorativne ciglice",
     "ciglice",
