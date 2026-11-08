@@ -35,7 +35,7 @@ export const categoryList: Category[] = [
     name: "Dekorativne ciglice od švapske opeke",
     description: "Autentična švapska ciglica sečena u listele",
     productIds: [31, 32, 33, 34],
-    image: "/svabska cigla.webp",
+    image: "/zuta premium/1000047864.jpg",
   },
   {
     id: 2,
